@@ -88,7 +88,7 @@ def _rosout(level, msg, fname, line, func):
 
                     # check parameter server/cache for omit_topics flag
                     # the same parameter is checked in rosout_appender.cpp for the same purpose
-                    disable_topics_ = rospy.get_param_cached("/rosout_disable_topics_generation", False)
+                    disable_topics_ = rospy.get_param_cached("/rosout_disable_topics_generation", True)
 
                     if not disable_topics_:
                         topics = get_topic_manager().get_topics()

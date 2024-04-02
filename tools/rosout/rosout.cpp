@@ -76,7 +76,7 @@ public:
     current_file_size_(0),
     max_backup_index_(10),
     current_backup_index_(0),
-    omit_topics_(false)
+    omit_topics_(true)
   {
     init();
   }
