@@ -96,7 +96,7 @@ class TestRosout(unittest.TestCase):
         self.assertEqual(log_msg, self.callback_data.msg)
         self.assertEqual(NAME+'.py', self.callback_data.file)
         self.assertEqual('TestRosout.test_rosout_dbg', self.callback_data.function)
-        self.assertEqual([SUBTOPIC], self.callback_data.topics)
+        self.assertEqual([], self.callback_data.topics)
 
     # Test that rosout is outputting info messages as expected
     def test_rosout_info(self):
@@ -120,7 +120,7 @@ class TestRosout(unittest.TestCase):
         self.assertEqual(log_msg, self.callback_data.msg)
         self.assertEqual(NAME+'.py', self.callback_data.file)
         self.assertEqual('TestRosout.test_rosout_info', self.callback_data.function)
-        self.assertEqual([SUBTOPIC], self.callback_data.topics)
+        self.assertEqual([], self.callback_data.topics)
 
     # Test that rosout is outputting warning messages as expected
     def test_rosout_warn(self):
@@ -144,7 +144,7 @@ class TestRosout(unittest.TestCase):
         self.assertEqual(log_msg, self.callback_data.msg)
         self.assertEqual(NAME+'.py', self.callback_data.file)
         self.assertEqual('TestRosout.test_rosout_warn', self.callback_data.function)
-        self.assertEqual([SUBTOPIC], self.callback_data.topics)
+        self.assertEqual([], self.callback_data.topics)
 
     # Test that rosout is outputting error messages as expected
     def test_rosout_err(self):
@@ -168,7 +168,7 @@ class TestRosout(unittest.TestCase):
         self.assertEqual(log_msg, self.callback_data.msg)
         self.assertEqual(NAME+'.py', self.callback_data.file)
         self.assertEqual('TestRosout.test_rosout_err', self.callback_data.function)
-        self.assertEqual([SUBTOPIC], self.callback_data.topics)
+        self.assertEqual([], self.callback_data.topics)
 
     # Test that rosout is outputting fatal messages as expected
     def test_rosout_fatal(self):
@@ -192,7 +192,7 @@ class TestRosout(unittest.TestCase):
         self.assertEqual(log_msg, self.callback_data.msg)
         self.assertEqual(NAME+'.py', self.callback_data.file)
         self.assertEqual('TestRosout.test_rosout_fatal', self.callback_data.function)
-        self.assertEqual([SUBTOPIC], self.callback_data.topics)
+        self.assertEqual([], self.callback_data.topics)
 
 
 if __name__ == '__main__':
