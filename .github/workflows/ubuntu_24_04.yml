@@ -58,7 +58,7 @@ jobs:
           sudo apt-get install -yqq python3-numpy
           sudo apt-get install -yqq python3-psutil
           python3 -m pip install -U vcstool rosdep
-          python3 -m pip install setuptools==58.2.0
+          python3 -m pip install -U setuptools==58.2.0
 
       - name: Install ROS basic packages
         run: |
