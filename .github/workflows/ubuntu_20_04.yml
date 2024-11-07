@@ -106,6 +106,8 @@ jobs:
           catkin_make
 
       - name: run tests with catkin_make
+        env:
+          ROS_ROOT: /opt/share/ros
         run: |
           # avoid error "ROS_ROOT does not point to a directory" from roswtf
           mkdir -p "$ROS_ROOT"
